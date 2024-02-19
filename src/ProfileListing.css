@@ -1,0 +1,38 @@
+.profile-listing {
+    padding: 20px;
+  }
+  
+  .profile-listing h2 {
+    margin-bottom: 20px;
+  }
+  
+  .user-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+  
+  .user-card {
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-card img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+  }
+  
+  .user-details {
+    padding: 10px;
+  }
+  
+  .user-details p {
+    margin: 5px 0;
+  }
+  
