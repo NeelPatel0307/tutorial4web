@@ -12,13 +12,18 @@ const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+
+    if (!email.trim() || !password.trim()) {
+      setError('Email and password cannot be empty');
+      return;
+    }
+
     try {
       const response = await axios.post('https://express-t4.onrender.com/api/login', {
         username: email,
         password: password
       });
 
-   
       console.log('Login successful:', response.data);
 
       navigate('/profile');
@@ -35,11 +40,11 @@ const LoginForm = () => {
         {error && <p className="error">{error}</p>}
         <div className="input-group">
           <label htmlFor="email">Email:</label>
-          <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
+          <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} />
         </div>
         <div className="input-group">
           <label htmlFor="password">Password:</label>
-          <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} required />
+          <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)}  />
         </div>
         <div className="submit-button">
           <button type="submit">Login</button>

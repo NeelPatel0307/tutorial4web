@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'; 
 import LoginForm from './LoginForm';
 import ProfileListing from './ProfileListing';
-import UserProfile from './UserProfile'; // Import UserProfile component
+import UserProfile from './UserProfile'; 
 
 function App() {
   return (
